@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riddle Generator</title>
+  <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: 'Georgia', serif;
+      color: #333;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #007acc;
+    }
+    .riddle-box {
+      margin: 20px auto;
+      max-width: 600px;
+      padding: 20px;
+      border: 2px dashed #007acc;
+      border-radius: 10px;
+      background-color: #ffffff;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #005f99;
+    }
+  </style>
+</head>
+<a href="../Main/indexpage.html">Home page</a>
+<body>
+  <h1>🧩 Riddle Generator</h1>
+  <p>Click the button below to generate a fun riddle!</p>
+
+  <div class="riddle-box">
+    <p id="riddle">Click below to get a riddle...</p>
+  </div>
+
+  <button onclick="generateRiddle()">Generate Riddle</button>
+
+  <script>
+    const riddles = [
+      "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I? (An echo)",
+      "The more of me you take, the more you leave behind. What am I? (Footsteps)",
+      "I’m tall when I’m young and short when I’m old. What am I? (A candle)",
+      "What has to be broken before you can use it? (An egg)",
+      "What can fill a room but takes up no space? (Light)"
+    ];
+
+    function generateRiddle() {
+      const randomIndex = Math.floor(Math.random() * riddles.length);
+      document.getElementById("riddle").textContent = riddles[randomIndex];
+    }
+
+  
+  </script>
+
+ 
+</body>
+</html>
